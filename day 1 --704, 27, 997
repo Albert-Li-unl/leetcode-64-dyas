@@ -1,0 +1,9 @@
+704 二分查找：
+  了解在【】【）两种区间下left 和right关系， 边界变化时，是否在middle基础上shift 1.
+
+27 移除元素：
+  双指针法确实精妙，自己只能想出暴力解法
+
+高级语言确实比c高级，如果不在原地删除，使用c的malloc（）创建新数组，要进行内存管理，避免memory leaks， heap overflow， malloc（）return NULL 等问题，但python 不需要这些，另外python 可以直接对比字符串等操作，简直方便多了。
+
+通过提交python， java， c++， c,  go四个版本代码，还可以入门熟悉其他编程语言
