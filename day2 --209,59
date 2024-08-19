@@ -1,1 +1,8 @@
 刷leetcode自己没有办法想出暴力解法外的巧妙解法，所以直接看视频，然后学习优秀代码写法，默写。这对我是最有效的学习方法
+209:
+暴力写法：
+内层for的right = left 而不是= 0, 否则 取得的最小值为负（即使minlen取绝对值，得到的最小值也是left==0 时的最小值）
+
+滑动窗口法：
+https://www.bilibili.com/video/BV14Q4y1P7Np/?spm_id_from=333.337.search-card.all.click
+
