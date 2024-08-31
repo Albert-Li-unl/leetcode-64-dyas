@@ -1,0 +1,13 @@
+203
+  while(cur->next != NULL){
+        if (cur->next->val == val){
+            ListNode *tmp = cur->next;
+            cur->next = cur->next->next;
+            free(tmp);
+        }
+ListNode *tmp = cur->next; 这一句在while（ if（） 中，
+安全性：在局部范围内使用 temp 可以减少误用的风险，防止 temp 在不该使用的地方被意外地使用或修改。
+可维护性：将 temp 保留在循环内部，有助于维护代码的一致性，减少潜在的错误。
+cur指向的node已经被验证过.val != val 
+  707
+  
