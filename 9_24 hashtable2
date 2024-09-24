@@ -1,0 +1,55 @@
+454
+383
+15
+18
+  qsort(), c sort function, which  qsort(values[], num_values, sizeof(int), cmp); cmp is pointer to the function cmp(), 
+  int cmp(const void *a, const void *b) {
+    int int_a = *(const int*)a;
+    int int_b = *(const int*)b;
+    
+    return ;
+}
+return positive means b,a;
+return negative means a,b;
+so ascending order:
+
+int cmp(const void *a, const void *b) {
+    int int_a = *(const int*)a;
+    int int_b = *(const int*)b;
+    return (int_a > int_b) - (int_a < int_b);
+}
+descending order:
+int cmp(const void *a, const void *b) {
+    int int_a = *(const int*)a;
+    int int_b = *(const int*)b;
+    // Reverse the logic for descending order
+    return (int_b > int_a) - (int_b < int_a);
+}
+
+Array Pointer (Pointer to an Array):
+  int arr[5];
+  int (*a)[5] = &arr; // 'a' is a pointer to an array of 5 integers
+  arr is an array of 5 integers (int[5]).
+  &arr is the address of the entire array, which has the type int (*)[5].
+  a is declared as a pointer to an array of 5 integers (int (*)[5]), so the assignment a = &arr; is valid.
+
+Pointer Array (Array of Pointers):
+ int *a[5]; // 'a' is an array of 5 pointers to integers
+ 
+ int *arr[5];   // Array of pointers to int
+ int **a = arr; // 'a' points to the first element of 'arr', which is an 'int *'
+
+
+int arr1[] = {1, 2, 3};
+int arr2[] = {4, 5, 6};
+int *array_of_pointers[2];
+
+array_of_pointers[0] = arr1;
+array_of_pointers[1] = arr2;
+int *(*a)[2] = &array_of_pointers;// *a is the array array_of_pointers.
+
+Use int (*a)[N]; when you need a pointer to an int array.
+Use int *(*a)[N]; when you need a pointer to an array of pointers (each pointing to int arrays).
+
+
+ 
