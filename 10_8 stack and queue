@@ -1,2 +1,5 @@
 232
   为何代码随想录中的代码pop（）中会弹出后再加载回stackin【】，保持stackout【】为空，因为在peek（）函数中就不用重复代码了，致使代码更好。
+20
+  else if (s[i] != st.top() || st.empty()) 会报错，因为有可能访问空栈，
+  else if ( st.empty() || s[i] != st.top() ) 这样是对的。
