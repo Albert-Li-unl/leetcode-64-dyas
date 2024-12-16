@@ -1,0 +1,29 @@
+非递归遍历 145
+错误写法
+class Solution {
+public:
+    vector<int> postorderTraversal(TreeNode* root)
+    {
+        TreeNode *node = root;
+        stack<TreeNode *> st;
+        vector<int> vec;
+        st.push(node);
+
+        while(!st.empty())
+        {
+            st.pop();
+            if(node)
+                vec.push(node->val);
+            else
+                continue;
+            st.push(node->right);
+            st.push(node->left);
+
+
+
+        }
+        return vec;
+    }
+};
+
+
